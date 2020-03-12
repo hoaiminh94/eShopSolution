@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using eShopSolution.WebApp.Models;
+using eShopSolution.Data.Entities;
 
 namespace eShopSolution.WebApp.Controllers
 {
@@ -20,6 +21,9 @@ namespace eShopSolution.WebApp.Controllers
 
         public IActionResult Index()
         {
+            TestDbContext test = new TestDbContext();
+            test.CreateDbContext();
+
             return View();
         }
 
