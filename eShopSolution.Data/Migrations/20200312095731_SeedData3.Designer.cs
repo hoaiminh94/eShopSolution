@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eShopSolution.Data.EF;
 
 namespace eShopSolution.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    partial class EShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200312095731_SeedData3")]
+    partial class SeedData3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -566,10 +568,10 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 3, 12, 17, 10, 32, 737, DateTimeKind.Local).AddTicks(9061),
+                            DateCreated = new DateTime(2020, 3, 12, 16, 57, 31, 465, DateTimeKind.Local).AddTicks(7753),
                             OriginalPrice = 100000m,
                             Price = 200000m,
-                            Stock = 1,
+                            Stock = 0,
                             ViewCount = 0
                         });
                 });
