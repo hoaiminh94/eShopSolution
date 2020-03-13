@@ -20,7 +20,8 @@ namespace eShopSolution.Data.EF
             var ConnectionString = configuration.GetConnectionString("eShopSolutionDb");
 
             var optionsBuilder = new DbContextOptionsBuilder<EShopDbContext>();
-            optionsBuilder.UseSqlServer("Server=DESKTOP-OVDBUKV;Database=eShopSolution;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer("Server=DESKTOP-OVDBUKV;Database=eShopSolution;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(ConnectionString);
 
             return new EShopDbContext(optionsBuilder.Options);
         }
