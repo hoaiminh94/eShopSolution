@@ -1,9 +1,9 @@
 ﻿using eShopSolution.Application.Catalog.Products.Dtos;
-using eShopSolution.Application.Catalog.Products.Dtos.Manage;
-using eShopSolution.Application.Dtos;
 using eShopSolution.Data.EF;
 using eShopSolution.Data.Entities;
 using eShopSolution.Utilities.Exceptions;
+using eShopSolution.ViewModels.Catalog.Products.Manage;
+using eShopSolution.ViewModels.Common;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -55,6 +55,11 @@ namespace eShopSolution.Application.Catalog.Products
             return await _context.SaveChangesAsync();
 
         }
+
+        //public Task<int> Create(ProductCreateRequest request)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public async Task<int> Delete(int productId)
         {
@@ -113,6 +118,11 @@ namespace eShopSolution.Application.Catalog.Products
             return pagedResult;
         }
 
+        //public Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public async Task<int> Update(ProductUpdateRequest request)
         {
             var product = _context.Products.FindAsync(request.Id);
@@ -127,6 +137,11 @@ namespace eShopSolution.Application.Catalog.Products
             return await _context.SaveChangesAsync();
 
         }
+
+        //public Task<int> Update(ProductUpdateRequest request)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {

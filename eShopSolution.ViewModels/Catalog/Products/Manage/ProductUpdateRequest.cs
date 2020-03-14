@@ -1,4 +1,4 @@
-﻿namespace eShopSolution.Application.Catalog.Products.Dtos.Manage
+﻿namespace eShopSolution.ViewModels.Catalog.Products.Manage
 {
     public class ProductUpdateRequest
     {
